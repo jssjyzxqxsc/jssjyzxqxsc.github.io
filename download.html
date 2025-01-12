@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>安装系统</title>
+    <style>
+      .download{
+        width: 115px;
+        height: 54px;
+        border: medium none;
+        border-radius: 2px;
+        background: #00A3D9 none repeat scroll 0% 0%;
+        font-size: 16px;
+        color: #FFF;
+        cursor: pointer;
+      }
+      .showver{
+        width: 115px;
+        height: 54px;
+        border: medium none;
+        border-radius: 2px;
+        background: #00A3D9 none repeat scroll 0% 0%;
+        font-size: 16px;
+        color: rgb(251,182,66);
+        cursor: pointer;
+      }
+      textarea{
+        width:800px;
+        height:400px;
+        fon-size:60px;
+        resize:none;
+      }
+      .tstitle{
+        font-size: 28px;
+        color: rgb(248,30,18);
+      }
+      .tstext{
+        font-size: 16px;
+        color: rgb(248,30,18);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function checkVersion() {
+        var ch = document.getElementById('checkButton');
+        var az = document.getElementById('showVersion');
+        var sc = document.getElementById('showCheck');
+        sc.style.display = 'block';
+        setTimeout(function(){
+          sc.style.display = 'none';
+          ch.style.display = 'none';
+          az.style.display = 'block';
+        },5000);
+        
+      }
+    </script>
+    <div>
+      <img src="https://cdn.luogu.com.cn/upload/image_hosting/pw2v6ezb.png"/>
+      <img src="https://cdn.luogu.com.cn/upload/image_hosting/5ftxj771.png"/>
+    </div>
+    <hr>
+    <center>
+    <h1>安装/更新系统</h1>
+    <button class="showver" id="checkButton" onclick="checkVersion()">点击检查更新</button>
+    <p id="showCheck" style="display:none;">检查中......</p>
+    <div id="showVersion" style="display:none;">
+      <textarea>
+        版本：V1.0.1
+        更新内容：全部程序
+      </textarea>
+      <br>
+      <a href="" target="-blank">
+        <button class="download">点击下载版本</button>
+      </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <button class="download">点击下载安装</button>
+    <br>
+    <br>
+    <p class="tstitle">温馨提示</p>
+    <p class="tstext">如果版本不为最新/没安装系统，将导致无法查看题目/登录</p>
+    </center>
+  </body>
+</html>
+
